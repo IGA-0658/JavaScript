@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/fondo.css">
+    <title>M4 - Ejercicio 1</title>
+
+</head>
+<body>
+    
+    <div id="fondoColor">
+        <h1>Presione un boton</h1>
+    </div>
+
+    <button onclick="colores('blue')"> Blue </button>
+    <button onclick="colores('red')"> Red </button>
+    <button onclick="colores('green')"> Green</button>
+    <button onclick="colores('pink')"> Pink </button>
+    
+    <script>
+
+    function colores(color){ //color lo tona de 'color' en el onclic del button
+    document.getElementById('fondoColor').innerHTML = 'El color es ' + color
+    document.getElementById('fondoColor').style.background = color
+    //alert('El color es ' + color)
+
+    }
+    
+    </script>
+    
+
+    <!-- /* 
+
+    <button onclick="colores('blue')"> Blue </button>
+    <button onclick="colores('red')"> Red </button>
+    <button onclick="colores('green')"> Green</button>
+    <button onclick="colores('pink')"> Pink </button>    
+
+    var boton = document.getElementsByTagName('button')
+
+    for(var i = 0; i <boton.length; i++ ){
+    boton[i].onclick = function(){ color(this.innerHTML)}
+    }
+    function color(nombre){
+    document.querySelector('h1').innerHTML = 'El color es ' + nombre;
+    //alert('El color es ' + nombre)
+    } */
+
+
+    /* blue */
+    /* var botblue = document.getElementById('botblue');
+    var fondoBlue = document.getElementById('fondoBlue');
+    
+    function fondo(){
+    fondoBlue.classList.add('fondoBlue');
+    fondoBlue.innerHTML = `El color es blue`;
+    
+    }
+    botblue.onclick = fondo; */ -->
+
+   
+
+
+
+
+
+</body>
+</html>
+
+<!-- SOLUCION 
+
+<div id="caja"></div>
+<button onclick="colores('blue')"> Blue </button>
+<button onclick="colores('red')"> Red </button>
+<button onclick="colores('green')"> Green</button>
+<button onclick="colores('pink')"> Pink </button>
+<script>
+function colores(color){
+document.getElementById('caja').innerHTML = 'El color es ' + color
+document.getElementById('caja').style.background = color
+//alert('El color es ' + color)
+
+}
+
+
+-->

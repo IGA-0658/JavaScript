@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - Desafio M3</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+
+        }
+
+        /* th {
+            text-transform: uppercase;
+        } */
+        th,
+        td {
+            /*  height: 20px; */
+            padding: 5px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <h1>Calculo de flujo de caja</h1>
+
+    <table id="tabla" style="width: 400px; text-align: left;">
+    </table>
+    <p id="ing"></p>
+    <p id="eg"></p>
+    <p id="dif"></p>
+    <h2 id="result"></h2>
+
+
+    <script>
+
+        var flujo = [{ periodo: 'Enero', ingreso: 1500, egreso: 1500 },
+        { periodo: 'Febrero', ingreso: 2500, egreso: 2500 },
+        { periodo: 'Marzo', ingreso: 84683, egreso: 1155 },
+        { periodo: 'Abril', ingreso: 135353, egreso: 1533 },
+        { periodo: 'Mayo', ingreso: 1535, egreso: 5434 },
+        { periodo: 'Junio', ingreso: 343354, egreso: 5434534 },
+        { periodo: 'Julio', ingreso: 435453, egreso: 4543 },
+        { periodo: 'Agosto', ingreso: 78351, egreso: 7816 },
+        { periodo: 'Septiembre', ingreso: 1878, egreso: 95634 },
+        { periodo: 'Octubre', ingreso: 48483, egreso: 9433 },
+        { periodo: 'Noviembre', ingreso: 35483, egreso: 53133 },
+        { periodo: 'Diciembre', ingreso: 3843, egreso: 348133 }
+        ]
+
+        mensaje = '<tr><th> Período </th><th>Ingreso</th><th>Egreso</th></tr>'
+
+        for (i = 0; i < flujo.length; i++) {
+
+            mensaje += '<tr><td>' + flujo[i].periodo + '<td>' + flujo[i].ingreso + '</td><td>' + flujo[i].egreso + '</td></tr>'
+
+        }
+
+        document.getElementById('tabla').innerHTML += mensaje
+
+        /* sumo ing */
+
+        var ingreso = 0;
+        var egreso = 0;
+
+        for (var i = 0; i < flujo.length; i++) {
+            var Actual = flujo[i];
+            ingreso += Actual.ingreso;
+            egreso += Actual.egreso;
+
+            document.getElementById('ing').innerHTML = 'Ingresos: ' + ingreso;
+            document.getElementById('eg').innerHTML = 'Egresos: ' + egreso;
+
+            var dif = ingreso - egreso
+            document.getElementById('dif').innerHTML = 'Resultado: ' + dif;
+
+        }
+
+        if (ingreso < egreso) {
+            document.getElementById('result').innerHTML = 'El flujo de caja genera pérdidas';
+            /* alert("El flujo de caja genera pérdidas"); */
+            result.style.color = 'red';
+        } else {
+            document.getElementById('result').innerHTML = 'El flujo de caja es positivo'
+            /* alert("El flujo de caja no genera pérdidas"); */
+            result.style.color = 'green';
+        }
+
+
+    </script>
+
+</body>
+
+</html>
+
+<!-- 
+SOLUCION
+
+var FlujoDeCaja = [
+    {
+        periodo: "Enero",
+        ingresos: 1500,
+        egresos: 1500
+    },
+    {
+        periodo: "Febrero",
+        ingresos: 2500,
+        egresos: 2500
+    },
+    {
+        periodo: "Marzo",
+        ingresos: 84683,
+        egresos: 1155
+    },
+    {
+        periodo: "Abril",
+        ingresos: 135353,
+        egresos: 1533
+    },
+    {
+        periodo: "Mayo",
+        ingresos: 1535,
+        egresos: 5434
+    },
+    {
+        periodo: "Junio",
+        ingresos: 4343354,
+        egresos: 5434534
+    },
+    {
+        periodo: "Julio",
+        ingresos: 435453,
+        egresos: 4543
+    },
+    {
+        periodo: "Agosto",
+        ingresos: 78351,
+        egresos: 7816
+    },
+    {
+        periodo: "Septiembre",
+        ingresos: 1878,
+        egresos: 95634
+    },
+    {
+        periodo: "Octubre",
+        ingresos: 48483,
+        egresos: 9433
+    },
+    {
+        periodo: "Noviembre",
+        ingresos: 35483,
+        egresos: 53133
+    },
+    {
+        periodo: "Diciembre",
+        ingresos: 3843,
+        egresos: 348133
+    },
+];
+
+var Ingresos = 0;
+var Egresos = 0;
+
+for (var i = 0; i < FlujoDeCaja.length; i++) {
+    var Actual = FlujoDeCaja[i];
+    Ingresos += Actual.ingresos;
+    Egresos += Actual.egresos;    
+}
+
+if(Ingresos < Egresos) {
+    alert("El flujo de caja genera pérdidas");
+} else {
+    alert("El flujo de caja no genera pérdidas");
+}
+
+ -->

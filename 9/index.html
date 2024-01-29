@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Día de la semana</title>
+  </head>
+  <body>
+    <!-- Se generará un mensaje de alerta que saludará al usuario
+con un mensaje diferente según el día de la semana que sea.
+Trabajaremos con getDay() y switch. -->
+
+    <script>
+      var fecha = new Date()
+      var dia = fecha.getDay()
+      switch (dia) {
+        case 0:
+          mensaje = 'es domingo'
+          break
+        case 1:
+          mensaje = 'es lunes'
+          break
+        case 2:
+          mensaje = 'es martes'
+          break
+        case 3:
+          mensaje = 'es miercoles'
+          break
+        case 4:
+          mensaje = 'es jueves'
+          break
+        case 5:
+          mensaje = 'es viernes'
+          break
+        case 6:
+          mensaje = 'es sabado'
+          break
+      }
+      alert('Hola hoy ' + mensaje + '!')
+      document.write(`<h1>Hola hoy ${mensaje}</h1>`)
+    </script>
+  </body>
+</html>
+
+<!-- 
+SOLUCION
+
+var fecha = new Date()
+var dia = fecha.getDay()
+switch (dia) {
+    case 0:
+        mensaje = "Qué lindo es domingo";
+        break;
+    case 1:
+    case 2:
+    case 3:
+        mensaje = "Aún falta para el viernes!";
+        break;
+          
+    case 4:
+        mensaje = "Falta,es jueves!";
+        break;
+    case 5:
+        mensaje = "Bien es viernes!";
+        break;
+    case 6:
+        mensaje = "Que soleado sábado!";
+}
+
+alert(mensaje)
+
+
+ -->

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Laboratorio</title>
+  </head>
+  <body>
+    <script>
+      var sueldo = prompt('Cual es tu sueldo en pesos Argentinos?')
+      sueldo = parseInt(sueldo)
+      var bonus = prompt('Cuanto fue tu bonus de este mes?')
+      bonus = parseInt(bonus)
+      var resultado = sueldo + bonus
+      document.write(
+        '<p>El resultado final de tu sueldo es ' + resultado + '</p>'
+      )
+      // agregado
+      var pobreton = resultado / 1300
+      document.write(
+        '<p>y equibale a € ' + pobreton + ', sos un pobreton....</p>'
+      )
+      // soy un genio
+    </script>
+  </body>
+</html>

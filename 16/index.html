@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M5 - Laboratorio 2</title>
+</head>
+
+<body>
+
+    <body>
+		<div id="nuevo">
+      <input type="text" placeholder="Nombre" id="txtNombre">
+      <input type="text" placeholder="Apellido" id="txtApellido">
+      <br />
+      <button id="btnAgregar">Agregar</button>
+    </div>
+		<div id="items"></div>
+
+		<script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			/**
+			 * Poder ingresar nuevos pares nombre / apellido
+			 **/
+			const nuevo = $("#nuevo");
+			const items = $("#items");
+			const estadisitcas = $("#estadisitcas");
+      const txtNombre = $("#txtNombre");
+      const txtApellido = $("#txtApellido");
+      const btnAgregar = $("#btnAgregar");
+
+      let listaItems = [];
+
+			const itemsTemplate = Handlebars.compile(`
+      <ul>
+        {{#each items}}
+        <li>{{this.nombre}} {{this.apellido}}</li>
+        {{/each}}
+      </ul>
+    `);
+    
+      btnAgregar.click(function(){
+        listaItems.push({
+          nombre: txtNombre.val(),
+          apellido: txtApellido.val()
+        });
+
+        items.html(itemsTemplate({ items: listaItems}))
+      });
+
+
+		</script> 
+
+</body>
+
+</html>

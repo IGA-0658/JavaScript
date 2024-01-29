@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Eventos JS</title>
+</head>
+<body>
+    
+   
+ <!-- <h1 id="titu1"></h1> -->
+ <!-- <h2 id="titulo"></h2> -->
+
+ <!-- EVENTOS DESDE HTML -->
+ <!-- <h2>Eventos desde HTML</h2>
+ <br>
+ <br>
+ <button onclick="alert('hola me hiciste clic')">Hacer clic</button>
+ <br>
+ <br>
+ <button onmouseover="alert('hola me pasate el mouse por arriba')">Acercar cussor</button>
+ <br>
+ <br>
+ <button onmouseout="alert('hola me pasaste el mouse por arriba')">Alejar cursor</button>
+ <br>
+ <br>
+ <button onmousemove="alert('Move el cursor del morse sobre mi')">Move el cursor</button>
+ <br>
+ <br>
+ <button onclick="window.open('www.mevoydelispa.com.ar')">Hacer clic</button>
+ <br>
+ <br>
+ <input type="text" onchange="alert('haz hecho un cambio en la caja')">
+ <br>
+ <br>
+ <input type="text" onblur="alert('haz dejado de hacer foco en la caja')">
+ <br>
+ <br>
+ <input type="text" onfocus="alert('haz hecho foco en la caja')">
+ <br>
+ <br>
+ <input type="text" onkeypress="alert('haz presionado una tecla dentro de la caja')">
+ <br>
+ <br>
+ <input type="text" onkeyup="alert('hazdejado de presionar una tecla dentro de la caja')">
+ <br>
+ <br>
+ <hr> -->
+ <!-- EVENTOS DESDE JAVA -->
+ <h2>Eventos desde JAVA</h2>
+ <!-- <br>
+ <button>haceme click</button><!-- no funciona con lo de arriba activado -->
+ <!-- <script>
+
+    document.querySelector('button').onclick = alerta;
+    function alerta(){
+
+        alert('eventos desde el codigo')
+    }
+
+ </script>
+<br>
+<br>
+<hr>  -->
+ <!-- EVENTOS JAVA con parametros-->
+
+<!-- <button onclick="saludarA('Ana')"> Ana </button>
+<script>
+
+    function saludarA(nombre){
+
+        alert('Hola ' + nombre)
+    }
+
+</script>
+<br>
+<br>
+<hr> -->
+
+<!-- reutiliza la funcion de arriba sin tener que cambiar el nombre en el boton -->
+<!-- <button onclick="saludarA('Ana')"> Ana </button>
+<button onclick="saludarA('Pedro')"> Pedro </button>
+<button onclick="saludarA('juan')"> juan </button>
+<button onclick="saludarA('Maria')"> Maria </button>
+<br>
+<br>
+<hr> -->
+
+<!-- mas eventos con parametros -->
+<button> Ana </button>
+<button> Pedro </button>
+<button> juan </button>
+<button> Maria </button>
+
+<script>
+
+var boton = document.getElementsByTagName('button')
+
+/* for(var i = 0; i <2; i++ ){
+boton[i].onclick = saludar
+}
+function saludar(){
+alert('hola')
+} */
+
+/* voy más allá */
+/* La idea es que pasemos el texto contenido en cada botón. Por esa razón lo hacemos con innerHTML, que de esta manera trabaja
+obteniendo el texto del botón. Como lo hacemos dentro del for, el innerHTML será diferente según sobre qué botón hagamos clic. */
+
+for(var i = 0; i <boton.length; i++ ){
+boton[i].onclick = function(){ saludarA(this.innerHTML)}
+}
+function saludarA(nombre){
+alert(nombre)
+}
+
+
+</script>
+
+
+ <!-- <script src="js/eventos.js"></script> -->
+</body>
+</html>

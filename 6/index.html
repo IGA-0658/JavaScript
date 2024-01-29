@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>US admin y PASS 1234</title>
+  </head>
+  <body>
+    <h1></h1>
+    <script>
+      var usu = prompt('Ingrese su usuario')
+      var pass = Number(prompt('Ingrese su contraseña'))
+      if (usu == 'admin' && pass == '1234') {
+        var saludo = document.querySelector('h1')
+        saludo.innerHTML = 'Hola, bienvenid@ <br> a nuestra aplicación.'
+      } else {
+        var saludo = document.querySelector('h1')
+        saludo.innerHTML =
+          'Erroor, los datos ingresados son incorrectos.<br> Chequee la info!'
+      }
+    </script>
+  </body>
+</html>
+
+<!-- 
+SOLUCION
+
+var Usuario = prompt("Nombre de usuario:");
+var Clave = Number(prompt("Contraseña:"));
+
+if(Usuario == "admin" && Clave == "1234") {
+    alert("Bienvenido/a");
+} else {
+    alert("Error");
+}
+
+ -->

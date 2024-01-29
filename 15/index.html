@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M5 - Laboratorio 1</title>
+</head>
+<body>
+
+    <script>
+
+        /* -- BUSCAR ERRORES Y A MEJORAR -- */
+
+        /* var numeroActual = 0;
+        do{
+            var numeroActual = Number(prompt("Ingrese el número actual"));
+            var suma = suma + numeroActual;
+        } while ((continuar = confirm("¿Desea seguir ingresando números?")));
+        alert("Total ingresado: "+suma); */
+
+        /* -- MODIFICACION -- */
+        var numeroActual = 0;
+        var suma; /* faltaba de finir variable */
+        do{
+            /* numeroActual = Number(prompt("Ingrese el número actual")); */
+            nuevoValor = Number(prompt("Ingrese el nuevo número")); /* Pq el numero actual "0" ya está definido */
+            suma = nuevoValor + numeroActual; /* estaba repetida suma, no tenia logica  */
+        } while ((continuar = confirm("¿Desea seguir ingresando números?")));
+        alert("Total ingresado: "+ suma);
+
+
+    </script>
+    
+</body>
+</html>

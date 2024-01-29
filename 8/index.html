@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rol == 'admin' && clave == '1234' && usu == 'maria'</title>
+  </head>
+
+  <body>
+    <h1></h1>
+    <script>
+      var rol = prompt('Cual es su rol?')
+      var clave = Number(prompt('Ingrese su calve'))
+      var usu = prompt('Cual es su nombre de usuario?')
+
+      if (rol == 'admin' && clave == '1234' && usu == 'maria') {
+        var saludo = document.querySelector('h1')
+        saludo.innerHTML = 'Hola María, bienvenida <br> a nuestra aplicación.'
+        /* innerHTML(''); */
+        /* alert('Bienvenido/a'); */
+      } else {
+        var saludo = document.querySelector('h1')
+        saludo.innerHTML =
+          'Ha habido un error, pregunte a su<br> supervisor rol y contraseñas correctas.'
+        /* alert('Error'); */
+      }
+
+      /* var usu = usu;
+        if (rol == admin) {
+          confirm('Ingrese su calve')  
+        }
+        else{
+            document.innerHTML(`<h1>Ha habido un error, pregunte a su<br> supervisor rol y contraseñas correctas.</h1>`)                
+        }
+        
+         if (clave === 1234) {
+          confirm('Cual es su nombre de usuario?')   
+        } 
+
+        else{
+            document.innerHTML(`<h1>Ha habido un error, pregunte a su<br> supervisor rol y contraseñas correctas.</h1>`)                
+        }
+        if (usu === maria) {
+            document.innerHTML(`<h1>Hola María, bienvenida <br> a nuestra aplicación.</h1>`)
+
+        }
+        else{
+            document.innerHTML(`<h1>Ha habido un error, pregunte a su<br> supervisor rol y contraseñas correctas.</h1>`)                
+        } */
+
+      /* ---------------- */
+
+      /* var Usuario = prompt("Nombre de usuario:");
+        var Clave = Number(prompt("Contraseña:"));
+
+        if (Usuario == "admin" && Clave == "1234") {
+            alert("Bienvenido/a");
+        } else {
+            alert("Error");
+        } */
+    </script>
+  </body>
+</html>

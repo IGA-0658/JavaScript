@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        Ingresos:
+        <input type="number" id="ingresos">
+    </div>
+
+    <button id="btn-calcular">Calcular</button>
+
+    <div>
+        <span>Gastos necesarios:</span>
+        <span id="gastos-necesarios"></span>
+    </div>
+
+    <div>
+        <span>Gastos opcionales:</span>
+        <span id="gastos-opcionales"></span>
+    </div>
+
+    <div>
+        <span>Ahorro e inversión:</span>
+        <span id="ahorro-inversion"></span>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#btn-calcular').click(function(){
+                const Ingrese = Number($('#ingresos').val());
+                $('#gastos-necesarios').html(Ingresos * 0.5);
+                $('#gastos-opcionales').html(Ingresos * 0.3);
+                $('#ahorro-inversion').html(Ingresos * 0.2);
+            });
+        });
+    </script>
+</body>
+</html>

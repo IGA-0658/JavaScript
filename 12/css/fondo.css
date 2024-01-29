@@ -1,0 +1,40 @@
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+div {
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(0, 173, 159);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+button {
+    width: 70px;
+    height: 30px;
+    color: black;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* .fondoBlue{
+    background-color: blue;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.fondoRed{
+    background-color: red;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+} */

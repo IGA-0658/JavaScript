@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+
+<body>
+
+    <script>
+
+        var ingre = Number(prompt('Ingrese el monto de sus ingresos'));
+        // ingre = parseInt(ingre);
+        var presGN = ingre * 0.50;
+        var presGO = ingre * 0.30;
+        var presAI = ingre * 0.20;
+        document.write('<p>Asignación de presupuesto 50-30-20.<br><br> Para un ingreso de: $' + ingre + '</p><br>');
+        document.write('<p>El presupuesto para Gastos Necesarios del 50% es --> $' + presGN + '</p>');
+        document.write('<p>El presupuesto para Gastos Opcionales del 30% es --> $' + presGO + '</p>');
+        document.write('<p>El presupuesto para Ahorro e Inversión del 20% es --> $' + presAI + '</p>');
+
+
+        /* SOLUCION
+
+        var Ingresos = Number(prompt("Ingrese el monto de sus ingresos"));
+
+        var GastosNecesarios = Ingresos * 0.5;
+
+        var GastosOpcionales = Ingresos * 0.3;
+
+        var AhorroInversion = Ingresos * 0.2;
+
+        alert("Distribución de sus ingresos:");
+        alert("Gastos necesarios: "+GastosNecesarios);
+        alert("Gastos opcionales: "+GastosOpcionales);
+        alert("Ahorro e inverisón: "+AhorroInversion);
+        
+        */
+    </script>
+
+</body>
+
+</html>

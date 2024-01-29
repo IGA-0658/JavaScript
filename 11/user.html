@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+</head>
+<body>
+    
+    <h1>Hola User, bienvenido <br> a nuestra aplicación.</h1>
+    <!-- <p></p> -->
+
+     
+    <table id="caja" style="border: 1px solid black;"></table>  
+    
+    <script>
+        var empleados = [{nombre: 'Juan', apellido : 'Pedro', edad: 40}, {nombre: 'Ana', apellido : 'García', edad: 25}, {nombre: 'Maria', apellido : 'Zarate', edad: 34}]
+                
+        mensaje = '<tr><th> Nombre </th><th>Apellido</th><th>Edad</th></tr>'
+        
+        for( i= 0;  i  < empleados.length; i++) {
+        
+        mensaje += '<tr><td>' + empleados[i].nombre + '<td>' + empleados[i].apellido + '</td><td>' + empleados[i].edad + '</td></tr>'
+        
+        }
+        
+        
+        document.getElementById('caja').innerHTML += mensaje
+        
+    </script>
+
+
+    
+   <!--  
+    Mi solucion
+    
+    <script>
+
+    var persona = ['Juan',       ' Pedro ', 40]; // 0 
+    var persona1 = ['Ana', ' Garcia ', 25]; // 1
+    var persona2 = ['Maria', ' Zarate ', 34]; // 2
+   
+    var tabla = document.querySelector('p');
+            tabla.innerHTML = '<strong>Nombre Apellido Edad </strong><br>' + persona + '<br>' + persona1 + '<br>' + persona2;
+
+    </script> -->
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+
+<body>
+
+    <script>
+
+        var CF = Number(prompt('Ingrese costos fijos'));
+        // var CF = prompt('Ingrese costos fijos');
+        // CF = parseInt(CF); comento pq uso Number
+        var PV = Number(prompt('Ingrese precio de venta'));
+        // PV = parseInt(PV);
+        var CV = Number(prompt('Ingrese costos variables'));
+        // CV = parseInt(CV);
+        var PEQ = CF / (PV - CV);
+        document.write('<p>El Punto de equilibrio es ' + PEQ + '</p>');
+
+
+        /* ----------------------------------------------------------------- */
+        /* SOLUCION
+
+        var PrecioVenta = Number(prompt("Ingrese el Precio de Venta"));
+
+        var CostosFijos = Number(prompt("Ingrese los Costos Fijos"));
+
+        var CostosVariables = Number(prompt("Ingrese los Costos Variables"));
+
+
+        var PuntoEquilibrio = CostosFijos / (PrecioVenta - CostosVariables);
+
+
+        alert("El punto de equilibrio es " + PuntoEquilibrio); */
+
+
+    </script>
+
+</body>
+
+</html>
